@@ -1,6 +1,6 @@
 app-id: io.github.dosbox_staging.dosbox-staging
 runtime: org.freedesktop.Platform
-runtime-version: '19.08'
+runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
 
 command: start
@@ -24,20 +24,11 @@ cleanup:
   - '/share/doc'
 
 modules:
-  - name: opusfile
-    config-opts:
-      - --disable-doc
-      - --disable-examples
-    sources:
-      - type: archive
-        url: https://github.com/xiph/opusfile/archive/v0.11.tar.gz
-        sha256: c2105cffc59545ffc0d2a65069e2f222a1712bbe579911ac0a3d3660edbbec57
-
   - name: dosbox-staging
     sources:
       - type: archive
-        url: https://github.com/dosbox-staging/dosbox-staging/archive/v0.75.0.tar.gz
-        sha256: 6279690a05b9cc134484b8c7d11e9c1cb53b50bdb9bf32bdf683bd66770b6658
+        url: https://github.com/dosbox-staging/dosbox-staging/archive/v0.75.1.tar.gz
+        sha256: 9155cc7220e612817670fbe51f30c69e560573f1daad075037194f2731a538a8
       - type: file
         path: dosbox-staging.appdata.xml
 
