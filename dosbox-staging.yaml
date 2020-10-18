@@ -47,13 +47,13 @@ modules:
     buildsystem: simple
     build-commands:
       - install -Dm644 dosbox-staging.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
-      - install -Dm644 dosbox-staging.appdata.xml /app/share/metainfo/${FLATPAK_ID}.appdata.xml
+      - install -Dm644 dosbox-staging.metadata.xml /app/share/metainfo/${FLATPAK_ID}.appdata.xml
       - install -Dm644 dosbox-staging.desktop /app/share/applications/${FLATPAK_ID}.desktop
       - sed -i s/Icon=.*/Icon=io.github.dosbox_staging.dosbox-staging/ /app/share/applications/${FLATPAK_ID}.desktop
     sources:
       - type: file
         path: contrib/icons/dosbox-staging.svg
       - type: file
-        path: dosbox-staging.appdata.xml
+        path: contrib/linux/dosbox-staging.metainfo.xml
       - type: file
         path: contrib/linux/dosbox-staging.desktop
